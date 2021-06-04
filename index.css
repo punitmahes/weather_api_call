@@ -1,0 +1,83 @@
+body{
+    margin: 0;
+    padding: 0;
+    height:100%;
+}
+
+#navbar{
+    background-color: skyblue;
+    text-align: center;
+    padding: 0;
+    margin-top: 0;
+    color: white;
+}
+
+.text{
+    margin: 0;
+    padding: 20px;
+}
+
+.textinput{
+    text-align: center;
+    height: 100px;
+    width: 100%;
+    color: skyblue;
+    
+
+}
+
+.input{
+    height: 60;
+    width: 40%;
+    color: grey;
+    height: 30px;
+    border-color: skyblue;
+    border-style: double;
+}
+
+.submit{
+    text-align: center;
+}
+
+.button{
+    background-color:skyblue;
+    color: white;
+    border-style:ridge;
+    font-size: 16px;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    border: none;
+}
+
+.display{
+    margin: auto;
+    background-color: skyblue;
+    margin-top: 100px;
+    width:40%;
+    text-align: center;
+    padding:0;
+    height: 50%;
+    border-radius: 50px;
+}
+.city{
+    width: 100%;
+    color:white;
+    font-size: 1.7em;
+    text-align: inline;
+    
+}
+
+.temperature{
+    color: white;
+    font-size: 1em;
+    margin: 10px;
+}
+
+
+.description{
+    color: white;
+    font-size:1em;
+    margin: 10px;
+    padding-bottom: 20px;
+}
