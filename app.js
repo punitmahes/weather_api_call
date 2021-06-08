@@ -5,7 +5,6 @@ const icon= document.getElementById("image");
 const temperature = document.getElementById("temp");
 const description = document.getElementById("desc");
 
-
 submit.addEventListener("click",()=>{
     const input = document.getElementById("search");
     fetch('https://api.openweathermap.org/data/2.5/weather?q='+ input.value +'&appid=68b82ae616a34f3a7dd8284b0c915347')
