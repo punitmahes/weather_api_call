@@ -7,6 +7,7 @@
     <title>Weather API</title>
 </head>
 <link rel="stylesheet" type="text/css" href="index.css">
+<link rel="stylesheet" type="text/css" href="jquery-ui.css">
 <body>
     <div id = "navbar">
         <h1 class = "text">Weather API</h1>
@@ -16,11 +17,9 @@
             <i class = "fas fa-city"></i>
             <h3>Enter your city name</h3>
         </div>
-        <input type="text" id="search" class="input"></input>
+        <input type="text" id="search"  class="input"></input>
     </div>
-    <div class = "submit", id ="submit_button">
-        <button class = "button" id = "searchUser">Submit</button>
-    </div>
+
 
     <div class = "display" id = "content">
         <div class = "city" >
@@ -32,7 +31,28 @@
     </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script type ="text/javascript" src="app.js"></script>
-<script type ="text/javascript" src="fetch.js"></script>
+<script type ="text/javascript" src="jquery-ui.js"></script>
+<script type="text/javascript" language="javascript" src="cities.json"></script> 
+<script>
+    var cities = [];
+    $(document).ready(function(){
+        $.getJSON("https://raw.githubusercontent.com/lutangar/cities.json/master/cities.json", function(data){
+            for(var i = 0; i < data.length; i++){
+                cities.push(data[i].name);
+            }
+        }).fail(function(){
+            console.log("An error has occurred.");
+        });
+    });
+    var city = ['Jaipur','Udaipur','New Delhi','Banglore'];
+    $("#search").autocomplete({
+        source: cities
+    },{
+        minLength: 3,
+        delay: 0,
+        autoFocus: true,
+
+    })
+</script>
 </html>
